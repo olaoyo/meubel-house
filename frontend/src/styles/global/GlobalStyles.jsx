@@ -19,6 +19,15 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.6;
         background: #FFFFFF;
     } 
+
+    a {
+        text-decoration: none;
+        /* color: ${({ theme }) => theme.colors.white.one}; */
+    }
+
+    * {
+        box-sizing: border-box;
+    }
 `;
 
 export default GlobalStyles;
