@@ -9,7 +9,7 @@ const furniture = [
     category: "Chairs",
     price: 800,
     countInStock: 10,
-    rating: 4.5,
+    rating: 2.5,
     numReviews: 12,
   },
   {
@@ -22,7 +22,7 @@ const furniture = [
     category: "Dinning Table",
     price: 2000,
     countInStock: 10,
-    rating: 5,
+    rating: 0.5,
     numReviews: 12,
   },
   {
@@ -35,7 +35,7 @@ const furniture = [
     category: "Bar",
     price: 2500,
     countInStock: 10,
-    rating: 4.5,
+    rating: 0,
     numReviews: 12,
   },
   {
@@ -61,7 +61,7 @@ const furniture = [
     category: "Sofa",
     price: 419,
     countInStock: 10,
-    rating: 4.5,
+    rating: 1,
     numReviews: 12,
   },
   {
@@ -74,7 +74,7 @@ const furniture = [
     category: "Chairs",
     price: 520,
     countInStock: 10,
-    rating: 4.5,
+    rating: 1.5,
     numReviews: 12,
   },
   {
@@ -87,7 +87,7 @@ const furniture = [
     category: "Tables",
     price: 217,
     countInStock: 10,
-    rating: 4.5,
+    rating: 3.5,
     numReviews: 12,
   },
   {
@@ -100,7 +100,7 @@ const furniture = [
     category: "Chairs",
     price: 459,
     countInStock: 10,
-    rating: 4.5,
+    rating: 3,
     numReviews: 12,
   },
   {
@@ -113,7 +113,7 @@ const furniture = [
     category: "Tables",
     price: 899,
     countInStock: 10,
-    rating: 4.5,
+    rating: 4,
     numReviews: 12,
   },
   {
@@ -126,7 +126,7 @@ const furniture = [
     category: "Chairs",
     price: 1299,
     countInStock: 10,
-    rating: 4.5,
+    rating: 1,
     numReviews: 12,
   },
   {
@@ -139,7 +139,7 @@ const furniture = [
     category: "Table",
     price: 700,
     countInStock: 10,
-    rating: 4.5,
+    rating: 1.5,
     numReviews: 12,
   },
   {
@@ -152,7 +152,7 @@ const furniture = [
     category: "Tables",
     price: 800,
     countInStock: 10,
-    rating: 4.5,
+    rating: 2,
     numReviews: 12,
   },
   {
@@ -165,7 +165,7 @@ const furniture = [
     category: "Chairs",
     price: 800,
     countInStock: 10,
-    rating: 4.5,
+    rating: 2.5,
     numReviews: 12,
   },
   {
@@ -191,7 +191,7 @@ const furniture = [
     category: "Sofas",
     price: 3595,
     countInStock: 10,
-    rating: 4.5,
+    rating: 4,
     numReviews: 12,
   },
   {
@@ -204,7 +204,7 @@ const furniture = [
     category: "Sofas",
     price: 800,
     countInStock: 10,
-    rating: 4.5,
+    rating: 5,
     numReviews: 12,
   },
 ];
