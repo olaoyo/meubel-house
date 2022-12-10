@@ -22,7 +22,9 @@ const GlobalStyles = createGlobalStyle`
 
     a {
         text-decoration: none;
-        /* color: ${({ theme }) => theme.colors.white.one}; */
+        :visited {
+            color: inherit;
+        }
     }
 
     * {
