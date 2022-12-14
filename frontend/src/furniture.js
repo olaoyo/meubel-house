@@ -1,6 +1,6 @@
-const furniture = [
+const furnitures = [
   {
-    id: 1,
+    id: "1",
     name: "Trenton Modular Sofa",
     image: "/images/Trenton Modular Sofa.png",
     description:
@@ -13,7 +13,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 2,
+    id: "2",
     name: "Granite Dining Table",
     image: "/images/Granite Dining Table.png",
     description:
@@ -26,7 +26,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 3,
+    id: "3",
     name: "Outdoor Bar Table and Stool",
     image: "/images/Outdoor Bar Table and Stool.png",
     description:
@@ -39,7 +39,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 4,
+    id: "4",
     name: "Plain Console",
     image: "/images/Plain Console.png",
     description:
@@ -52,7 +52,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 5,
+    id: "5",
     name: "Grain Coffee Table",
     image: "/images/Grain Coffee Table.png",
     description:
@@ -65,7 +65,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 6,
+    id: "6",
     name: "Kent Coffee Table",
     image: "/images/Kent Coffee Table.png",
     description:
@@ -78,7 +78,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 7,
+    id: "7",
     name: "Round Coffee Table",
     image: "/images/Round Coffee Table.png",
     description:
@@ -91,7 +91,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 8,
+    id: "8",
     name: "Reclaimed Teak Coffee Table",
     image: "/images/Reclaimed Teak Coffee Table.png",
     description:
@@ -104,7 +104,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 9,
+    id: "9",
     name: "Plain Console",
     image: "/images/Plain Console.png",
     description:
@@ -117,8 +117,8 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 10,
-    name: "Reclaimed Teak Sideboard.",
+    id: "10",
+    name: "Reclaimed Teak Sideboard",
     image: "/images/Reclaimed Teak Sideboard.png",
     description:
       "Rich texture and organic spirit are conveyed through an eye-catching mixture of mango woods, cotton rope and natural cane. Iron accents adopt gunmetal finishes, refreshing forms’ iconic mid-century influence, as a clean-lined aesthetic is met with modern functionality. ",
@@ -130,7 +130,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 11,
+    id: "11",
     name: "Outdoor Four Chairs And Table",
     image: "/images/Outdoor Four Chairs And Table.png",
     description:
@@ -143,7 +143,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 12,
+    id: "12",
     name: "Bella Chair And Table",
     image: "/images/Bella Chair And Table.png",
     description:
@@ -156,7 +156,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 13,
+    id: "13",
     name: "Granite Square Side Table",
     image: "/images/Granite Square Side Table.png",
     description:
@@ -169,7 +169,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 14,
+    id: "14",
     name: "Asgaard Sofa",
     image: "/images/Asgaard Sofa.png",
     description:
@@ -182,7 +182,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 15,
+    id: "15",
     name: "Maya Sofa Three Seater",
     image: "/images/Maya Sofa Three Seater.png",
     description:
@@ -195,7 +195,7 @@ const furniture = [
     numReviews: 12,
   },
   {
-    id: 16,
+    id: "16",
     name: "Outdoor Sofa Set",
     image: "/images/Outdoor Sofa Set.png",
     description:
@@ -209,4 +209,4 @@ const furniture = [
   },
 ];
 
-export default furniture;
+export default furnitures;
