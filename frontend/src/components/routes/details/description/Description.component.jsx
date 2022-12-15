@@ -14,11 +14,11 @@ function Description({ furniture }) {
       <Furniture>
         
         <FurnitureCard>
-          <FurnitureImg src={furniture.image} />
+          <FurnitureImg src={furniture.image} alt={furniture.name} />
         </FurnitureCard>
 
         <FurnitureCard>
-          <FurnitureImg src={furniture.image} />
+          <FurnitureImg src={furniture.image} alt={furniture.name} />
         </FurnitureCard>
         
       </Furniture>

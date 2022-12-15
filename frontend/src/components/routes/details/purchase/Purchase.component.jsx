@@ -33,14 +33,14 @@ function Purchase({ furniture }) {
   return (
     <PurchaseStyles>
       <ImgSmallGrid>
-        <ImgSmall src={furniture.image} />
-        <ImgSmall src={furniture.image} />
-        <ImgSmall src={furniture.image} />
-        <ImgSmall src={furniture.image} />
+        <ImgSmall src={furniture.image} alt={furniture.name} />
+        <ImgSmall src={furniture.image} alt={furniture.name} />
+        <ImgSmall src={furniture.image} alt={furniture.name} />
+        <ImgSmall src={furniture.image} alt={furniture.name} />
       </ImgSmallGrid>
 
       <ImgBigGrid>
-        <ImgBig src={furniture.image} />
+        <ImgBig src={furniture.image} alt={furniture.name} />
       </ImgBigGrid>
 
       <DetailsGrid>
