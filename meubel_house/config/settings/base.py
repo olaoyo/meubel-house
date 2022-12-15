@@ -78,7 +78,8 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    "meubel_house.users",
+    "meubel_house.users.apps.UsersConfig",
+    "meubel_house.furniture.apps.FurnitureConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
