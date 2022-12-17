@@ -18,6 +18,7 @@ function FurnitureList() {
   useEffect(() => {
     async function fetchFurnitures() {
       const { data } = await axios.get(API.furniture.shop)
+      console.log(data)
       setFurnitures(data)
     }
     fetchFurnitures()
@@ -26,8 +27,8 @@ function FurnitureList() {
   return (
     <FurnitureListStyles>
       {furnitures.map((furniture) => (
-        <FurnitureCard key={furniture.id}>
-          <Link to={`/shop/furniture/${furniture.id}`}>
+        <FurnitureCard key={furniture._id}>
+          <Link to={`/shop/furniture/${furniture._id}`}>
               <FurnitureImg src={furniture.image} alt={furniture.name} />
               <FurnitureText>
                 <FurnitureNamePrice>{furniture.name}</FurnitureNamePrice>
