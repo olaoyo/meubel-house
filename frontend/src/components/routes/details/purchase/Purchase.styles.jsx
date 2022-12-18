@@ -62,7 +62,7 @@ export const DetailsHeader = styled.h4`
   margin-bottom: -1rem;
 `;
 
-export const DetailsP1P2 = styled.p`
+export const Details = styled.p`
   ${({ grey }) =>
     grey
       ? css`
@@ -72,34 +72,32 @@ export const DetailsP1P2 = styled.p`
           color: ${({ theme }) => theme.colors.black};
         `};
 
-  ${({ p1 }) =>
+  ${({ p1, p2, p3, p5, p6, p7 }) =>
     p1
       ? css`
           font-size: ${({ theme }) => theme.fontSizes.paragraphs.p1};
         `
-      : css`
-          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p2};
-        `}
-`;
-
-export const DetailsP3P5 = styled.p`
-  ${({ grey }) =>
-    grey
+      : p2
       ? css`
-          color: ${({ theme }) => theme.colors.grey.one};
+          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p2};
         `
-      : css`
-          color: ${({ theme }) => theme.colors.black};
-        `};
-
-  ${({ p3 }) =>
-    p3
+      : p3
       ? css`
           font-size: ${({ theme }) => theme.fontSizes.paragraphs.p3};
         `
-      : css`
+      : p5
+      ? css`
           font-size: ${({ theme }) => theme.fontSizes.paragraphs.p5};
-        `}
+        `
+      : p6
+      ? css`
+          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p6};
+        `
+      : p7
+      ? css`
+          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p7};
+        `
+      : css``}
 
   ${({ ml }) =>
     ml
@@ -107,26 +105,6 @@ export const DetailsP3P5 = styled.p`
           margin-left: -2rem;
         `
       : css``}
-`;
-
-export const DetailsP6 = styled.p`
-  ${({ grey }) =>
-    grey
-      ? css`
-          color: ${({ theme }) => theme.colors.grey.one};
-        `
-      : css`
-          color: ${({ theme }) => theme.colors.black};
-        `};
-
-  ${({ p6 }) =>
-    p6
-      ? css`
-          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p6};
-        `
-      : css`
-          font-size: ${({ theme }) => theme.fontSizes.paragraphs.p7};
-        `}
 `;
 
 export const Reviews = styled.div`
@@ -162,7 +140,7 @@ export const Description = styled.div`
 export const SizeAndColorGrid = styled.div`
   display: grid;
   grid-template-rows: repeat(4, max-content);
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   row-gap: 1.3rem;
 `;
 

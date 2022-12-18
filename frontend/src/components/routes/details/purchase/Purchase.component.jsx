@@ -6,9 +6,7 @@ import {
   ImgBig,
   DetailsGrid,
   DetailsHeader,
-  DetailsP1P2,
-  DetailsP3P5,
-  DetailsP6,
+  Details,
   Reviews,
   RatingGrid,
   ReviewsButton,
@@ -45,9 +43,9 @@ function Purchase({ furniture }) {
 
       <DetailsGrid>
         <DetailsHeader>{furniture.name}</DetailsHeader>
-        <DetailsP1P2 p1 grey>
+        <Details p1 grey>
           ${furniture.price}
-        </DetailsP1P2>
+        </Details>
 
         <Reviews>
           <RatingGrid>
@@ -55,32 +53,32 @@ function Purchase({ furniture }) {
           </RatingGrid>
 
           <ReviewsButton>
-            <DetailsP6 p6 grey>
+            <Details p6 grey>
               {furniture.numReviews} Customer Reviews
-            </DetailsP6>
+            </Details>
           </ReviewsButton>
         </Reviews>
 
         <Description>
-          <DetailsP6>{furniture.description}</DetailsP6>
+          <Details p7>{furniture.description}</Details>
         </Description>
 
         <SizeAndColorGrid>
-          <DetailsP3P5 grey>Size</DetailsP3P5>
+          <Details grey>Size</Details>
 
           <SizeAndColor>
             <SizeBg selected>
-              <DetailsP6>L</DetailsP6>
+              <Details>L</Details>
             </SizeBg>
             <SizeBg>
-              <DetailsP6>XL</DetailsP6>
+              <Details>XL</Details>
             </SizeBg>
             <SizeBg>
-              <DetailsP6>XS</DetailsP6>
+              <Details>XS</Details>
             </SizeBg>
           </SizeAndColor>
 
-          <DetailsP3P5 grey>Color</DetailsP3P5>
+          <Details grey>Color</Details>
 
           <SizeAndColor>
             <ColorBg1 purple />
@@ -94,7 +92,7 @@ function Purchase({ furniture }) {
             <AddRemove>
               <span className="material-symbols-outlined">remove</span>
             </AddRemove>
-            <DetailsP3P5 p3>1</DetailsP3P5>
+            <Details p3>1</Details>
             <AddRemove>
               <span className="material-symbols-outlined">add</span>
             </AddRemove>
@@ -105,25 +103,25 @@ function Purchase({ furniture }) {
 
         <Tags>
           <Tag>
-            <DetailsP3P5 grey>SKL</DetailsP3P5>
-            <DetailsP3P5 grey ml>
+            <Details grey>SKL</Details>
+            <Details grey ml>
               : SS001
-            </DetailsP3P5>
+            </Details>
           </Tag>
           <Tag>
-            <DetailsP3P5 grey>Category</DetailsP3P5>
-            <DetailsP3P5 grey ml>
+            <Details grey>Category</Details>
+            <Details grey ml>
               : Sofas
-            </DetailsP3P5>
+            </Details>
           </Tag>
           <Tag>
-            <DetailsP3P5 grey>Tags</DetailsP3P5>
-            <DetailsP3P5 grey ml>
+            <Details grey>Tags</Details>
+            <Details grey ml>
               : {furniture.category}
-            </DetailsP3P5>
+            </Details>
           </Tag>
           <Tag>
-            <DetailsP3P5 grey>Share</DetailsP3P5>
+            <Details grey>Share</Details>
             <SocialMedia grey ml>
               :
               <Social>
