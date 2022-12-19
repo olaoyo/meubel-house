@@ -6,11 +6,13 @@ import {
   DetailsNavButton,
 } from "./DetailsNav.styles";
 
-function DetailsNav({ home, shop, furniture }) {
+import { APILink } from "../../../api/api";
+
+function DetailsNav({ home, shop, furniture, error }) {
   return (
     <DetailsNavStyles>
       <DetailsParagraphs>
-        <NavLink to="/">{home}</NavLink>
+        <NavLink to={APILink.furniture.home}>{home}</NavLink>
       </DetailsParagraphs>
 
       <DetailsNavArrowActive>
@@ -18,7 +20,7 @@ function DetailsNav({ home, shop, furniture }) {
       </DetailsNavArrowActive>
 
       <DetailsParagraphs>
-        <NavLink to="/shop">{shop}</NavLink>
+        <NavLink to={APILink.furniture.shop}>{shop}</NavLink>
       </DetailsParagraphs>
 
       <DetailsNavArrowActive>
@@ -26,7 +28,11 @@ function DetailsNav({ home, shop, furniture }) {
       </DetailsNavArrowActive>
 
       <DetailsNavButton>
-        <DetailsParagraphs black>{furniture.name}</DetailsParagraphs>
+        {error ? (
+          <DetailsParagraphs>{error}</DetailsParagraphs>
+        ) : (
+          <DetailsParagraphs black>{furniture.name}</DetailsParagraphs>
+        )}
       </DetailsNavButton>
     </DetailsNavStyles>
   );

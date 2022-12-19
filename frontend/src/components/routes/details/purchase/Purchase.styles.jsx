@@ -170,30 +170,27 @@ export const SizeBg = styled.div`
         `}
 `;
 
-export const ColorBg1 = styled.div`
+export const ColorBg = styled.div`
   width: 3rem;
   height: 3rem;
   border-radius: 50px;
   justify-items: center;
   align-items: center;
 
-  ${({ purple }) =>
+  ${({ purple, black, gold }) =>
     purple
       ? css`
           background: ${({ theme }) => theme.colors.purple};
         `
-      : css`
+      : black
+      ? css`
           background: ${({ theme }) => theme.colors.black};
-        `}
-`;
-
-export const ColorBg2 = styled.div`
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50px;
-  justify-items: center;
-  align-items: center;
-  background: ${({ theme }) => theme.colors.gold.one};
+        `
+      : gold
+      ? css`
+          background: ${({ theme }) => theme.colors.gold.one};
+        `
+      : css``}
 `;
 
 export const QtyAddToCart = styled.div`

@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { APILink } from "../../../api/api";
 import {
   HomeNavStyles,
   HomeParagraphs,
@@ -9,7 +10,7 @@ function HomeNav({ route }) {
   return (
     <HomeNavStyles>
       <HomeParagraphs medium>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to={APILink.furniture.home}>Home</NavLink>
       </HomeParagraphs>
 
       <HomeNavArrowActive>

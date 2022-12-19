@@ -16,28 +16,29 @@ import Loading from "../../loading/Loading.component";
 import Message from "../../message/Message.component";
 import Rating from "../../rating/Rating.component";
 
+import { APILink } from "../../../api/api";
+
 function FurnitureList() {
   const dispatch = useDispatch();
   const { loading, furnitures, error } = useSelector(
     (state) => state.furnitureList
   );
-  console.log(furnitures);
 
   useEffect(() => {
     dispatch(listFurnitures());
   }, [dispatch]);
 
   return (
-    <FurnitureListStyles>
+    <>
       {loading ? (
         <Loading />
       ) : error ? (
         <Message>{error}</Message>
       ) : (
-        <>
+        <FurnitureListStyles>
           {furnitures.map((furniture) => (
             <FurnitureCard key={furniture._id}>
-              <Link to={`/shop/furniture/${furniture._id}`}>
+              <Link to={APILink.furniture.details(furniture._id)}>
                 <FurnitureImg src={furniture.image} alt={furniture.name} />
                 <FurnitureText>
                   <FurnitureNamePrice>{furniture.name}</FurnitureNamePrice>
@@ -49,9 +50,9 @@ function FurnitureList() {
               </Link>
             </FurnitureCard>
           ))}
-        </>
+        </FurnitureListStyles>
       )}
-    </FurnitureListStyles>
+    </>
   );
 }
 

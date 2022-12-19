@@ -11,10 +11,14 @@ const spinner = keyframes`
 `;
 
 export const LoadingStyles = styled.div`
+  grid-column: left-start / right-end;
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, max-content);
   row-gap: 2rem;
   padding-top: 10rem;
+  justify-items: center;
+  align-items: center;
 `;
 
 export const LoadingSpinner = styled.div`
@@ -24,10 +28,10 @@ export const LoadingSpinner = styled.div`
   border-radius: 90%;
   border-top: none;
   margin: 16px auto;
-  animation: ${spinner} 0.3s linear infinite;
+  animation: ${spinner} .3s linear infinite;
 `;
 
 export const LoadingText = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.paragraphs.p2};
-  color: ${({ theme }) => theme.colors.grey.one};
-`;
+    font-size: ${({ theme }) => theme.fontSizes.paragraphs.p2};
+    color: ${({ theme }) => theme.colors.grey.one};
+`
