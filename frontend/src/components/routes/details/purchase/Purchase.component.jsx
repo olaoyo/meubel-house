@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   PurchaseStyles,
   ImgSmallGrid,
@@ -28,8 +30,29 @@ import { AddToCartButton } from "../../../buttons/Buttons";
 
 import Loading from "../../../loading/Loading.component";
 import Message from "../../../message/Message.component";
+import { APILink } from "../../../../api/api";
 
-function Purchase({ loading, furniture, error }) {
+function Purchase({ loading, furniture, error, furnitureId }) {
+  const [qty, setQty] = useState(1);
+
+  const navigate = useNavigate();
+
+  const addFurniture = () => {
+    setQty(qty + 1);
+  };
+
+  const removeFurniture = () => {
+    setQty(qty > 1 ? qty - 1 : qty);
+  };
+
+  const onChangeHandler = (event) => {
+    setQty(event.target.value);
+  };
+
+  const addToCartHandler = () => {
+    navigate(APILink.addToCart(furnitureId, qty));
+  };
+
   return (
     <>
       {loading ? (
@@ -87,15 +110,19 @@ function Purchase({ loading, furniture, error }) {
             </SizeAndColorGrid>
             <QtyAddToCart>
               <Qty>
-                <AddRemove>
+                <AddRemove onClick={removeFurniture}>
                   <span className="material-symbols-outlined">remove</span>
                 </AddRemove>
-                <Details p3>1</Details>
-                <AddRemove>
+                <Details p3 value={qty} onChange={onChangeHandler}>
+                  {qty}
+                </Details>
+                <AddRemove onClick={addFurniture}>
                   <span className="material-symbols-outlined">add</span>
                 </AddRemove>
               </Qty>
-              <AddToCartButton>Add To Cart</AddToCartButton>
+              <AddToCartButton onClick={addToCartHandler}>
+                Add To Cart
+              </AddToCartButton>
             </QtyAddToCart>
             <Tags>
               <Tag>

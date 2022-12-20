@@ -12,6 +12,7 @@ import {
 import Search from "../../inputs/search/Search.component";
 import { LoginButton } from "../../buttons/Buttons";
 import MeubelHouseLogo from "./img/MeubelHouseLogo.png"
+import { APILink } from "../../../api/api";
 
 function Header() {
   return (
@@ -19,21 +20,21 @@ function Header() {
       <HeaderStyles>
         
         <LogoGrid>
-          <Link to="/">
+          <Link to={APILink.furniture.home}>
             <Logo src={MeubelHouseLogo} />
           </Link>
         </LogoGrid>
         
         <Search />
         <Menu>
-          <Link to="/shop">
+          <Link to={APILink.furniture.shop}>
             <MenuItem>Shop</MenuItem>
           </Link>
           <MenuItem>Admin</MenuItem>
           <MenuItem>Profile</MenuItem>
         </Menu>
         <Cart>
-          <span className="material-symbols-outlined">shopping_cart</span>
+          <Link to={APILink.cart}><span className="material-symbols-outlined">shopping_cart</span></Link>
         </Cart>
         <ProfileOuter>
           <ProfileInner>

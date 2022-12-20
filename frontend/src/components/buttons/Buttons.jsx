@@ -82,4 +82,14 @@ export const AddToCartButton = styled.button`
   background: transparent;
   border: 1px solid ${({ theme }) => theme.colors.black};
   border-radius: 15px;
+  transition: all 0.2s;
+
+  :hover {
+    cursor: pointer;
+    transform: translateY(-2px) scale(1.01);
+  }
+
+  :active {
+    transform: scale(1);
+  }
 `;

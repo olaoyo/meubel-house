@@ -217,6 +217,15 @@ export const Qty = styled.div`
 export const AddRemove = styled.div`
   display: grid;
   grid-template-columns: 1, max-content;
+  transition: all .2s;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  :active {
+    transform: scale(.8);
+  }
 `;
 
 export const Tags = styled.div`

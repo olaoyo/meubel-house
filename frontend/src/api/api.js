@@ -13,6 +13,10 @@ export const APILink = {
     shop: `/shop`,
     details: (id) => `/shop/furniture/${id}`,
   },
+
+  cart: `/cart`,
+  addToCart: (id, qty) =>`/cart/${id}/qty?=${qty}`,
+  
 };
 
 export default API;
