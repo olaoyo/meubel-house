@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
 import {
   PurchaseStyles,
   ImgSmallGrid,
@@ -28,29 +30,40 @@ import {
 import Rating from "../../../rating/Rating.component";
 import { AddToCartButton } from "../../../buttons/Buttons";
 
+import { addFurnitureToCart } from "../../../../redux/actions/cartActions";
+
 import Loading from "../../../loading/Loading.component";
 import Message from "../../../message/Message.component";
 import { APILink } from "../../../../api/api";
 
 function Purchase({ loading, furniture, error, furnitureId }) {
-  const [qty, setQty] = useState(1);
+  const [amount, setAmount] = useState(1);
+
+  const dispatch = useDispatch();
+
+  // Get qty from redux state
+  const { cartItems } = useSelector((state) => state.cart);
+  const currentFurniture = cartItems.find((furniture) => furniture.id === +furnitureId) 
+  // 
 
   const navigate = useNavigate();
 
   const addFurniture = () => {
-    setQty(qty + 1);
+    setAmount(amount + 1);
   };
 
   const removeFurniture = () => {
-    setQty(qty > 1 ? qty - 1 : qty);
+    setAmount(amount > 1 ? amount - 1 : amount);
   };
 
   const onChangeHandler = (event) => {
-    setQty(event.target.value);
+    setAmount(event.target.value);
   };
 
   const addToCartHandler = () => {
-    navigate(APILink.addToCart(furnitureId, qty));
+    dispatch(addFurnitureToCart(furnitureId, amount))
+    navigate(APILink.cart);
+    // navigate(APILink.addToCart(furnitureId, amount));
   };
 
   return (
@@ -113,8 +126,9 @@ function Purchase({ loading, furniture, error, furnitureId }) {
                 <AddRemove onClick={removeFurniture}>
                   <span className="material-symbols-outlined">remove</span>
                 </AddRemove>
-                <Details p3 value={qty} onChange={onChangeHandler}>
-                  {qty}
+                <Details p3 value={amount} onChange={onChangeHandler}>
+                  {/* {currentFurniture ? currentFurniture.qty : amount} */}
+                  {amount}
                 </Details>
                 <AddRemove onClick={addFurniture}>
                   <span className="material-symbols-outlined">add</span>
