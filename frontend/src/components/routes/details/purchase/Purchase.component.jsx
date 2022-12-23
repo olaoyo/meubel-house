@@ -30,7 +30,7 @@ import {
 import Rating from "../../../rating/Rating.component";
 import { AddToCartButton } from "../../../buttons/Buttons";
 
-import { addFurnitureToCart } from "../../../../redux/actions/cartActions";
+import { addFurnitureToCart, increaseFurnitureQty, decreaseFurnitureQty } from "../../../../redux/actions/cartActions";
 
 import Loading from "../../../loading/Loading.component";
 import Message from "../../../message/Message.component";

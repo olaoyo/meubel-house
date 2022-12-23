@@ -16,6 +16,7 @@ export const APILink = {
 
   cart: `/cart`,
   addToCart: (id, qty) =>`/cart/${id}/qty?=${qty}`,
+  checkout: `/login?redirect=chekout`,
   
 };
 
