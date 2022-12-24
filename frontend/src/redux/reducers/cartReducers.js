@@ -10,28 +10,24 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
 
     case CART_ADD_FURNITURE:
-      const furniture = action.payload;
+      const furnitureToAdd = action.payload;
       const furnitureInCart = state.cartItems.find(
-        (mueble) => mueble.id === furniture.id
+        (mueble) => mueble.id === furnitureToAdd.id
       );
 
       if (furnitureInCart) {
         return {
           ...state,
           cartItems: state.cartItems.map((mueble) =>
-            mueble.id === furnitureInCart.id ? furniture : mueble
+            mueble.id === furnitureInCart.id ? furnitureToAdd : mueble
           ),
         };
       } else {
         return {
           ...state,
-          cartItems: [...state.cartItems, furniture],
+          cartItems: [...state.cartItems, furnitureToAdd],
         };
       }
-
-
-    case CART_REMOVE_FURNITURE:
-      return { loading: false, cartItems: action.payload };
 
 
     case FURNITURE_INCREASE_QTY:
@@ -58,6 +54,16 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
             : furniture
         ),
       };
+    
+    
+    case CART_REMOVE_FURNITURE:
+      const furnitureToDelete = action.payload;
+      
+      return { 
+        ...state,
+        cartItems: state.cartItems.filter((mueble) => mueble.id !== furnitureToDelete)
+       };
+  
 
     default:
       return state;

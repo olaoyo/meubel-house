@@ -29,11 +29,10 @@ export const addFurnitureToCart =
 
 
 export const increaseFurnitureQty = (furnitureId) => async (dispatch, getState) => {
-    const { data } = await axios.get(API.furniture.details(furnitureId));
-
+    
     dispatch({
       type: FURNITURE_INCREASE_QTY,
-      payload: data._id,
+      payload: furnitureId
     });
 
     localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
@@ -41,12 +40,24 @@ export const increaseFurnitureQty = (furnitureId) => async (dispatch, getState) 
 
 
   export const decreaseFurnitureQty = (furnitureId) => async (dispatch, getState) => {
-    const { data } = await axios.get(API.furniture.details(furnitureId))
-
+    
     dispatch({
         type: FURNITURE_DECREASE_QTY,
-        payload: data._id
+        payload: furnitureId
     });
 
     localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems))
   }; 
+
+
+  export const removeFurnitureFromCart = (furnitureId) => async (dispatch, getState) => {
+    
+    dispatch({
+      type: CART_REMOVE_FURNITURE,
+      payload: furnitureId
+    })
+    
+    localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems))
+  };
+
+  
